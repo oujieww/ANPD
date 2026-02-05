@@ -1,10 +1,4 @@
 import os
-os.environ['TRANSFORMERS_CACHE'] = '/home/UserData/huggingface_cache'
-os.environ['http_proxy'] = 'http://192.168.3.206:20171/'
-os.environ['https_proxy'] = 'http://192.168.3.206:20171/'
-os.environ['HTTP_PROXY'] = 'http://192.168.3.206:20171/'
-os.environ['HTTPS_PROXY'] = 'http://192.168.3.206:20171/'
-
 import pickle
 from collections import defaultdict, deque
 import random
@@ -23,9 +17,6 @@ from accelerate import infer_auto_device_map, init_empty_weights
 import deepspeed
 from datasets import load_dataset
 
-seed=42
-torch.manual_seed(seed)
-np.random.seed(seed)
 
 PROMPT_DICT = {
     "prompt_input": (
